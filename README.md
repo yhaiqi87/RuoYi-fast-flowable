@@ -14,9 +14,24 @@
 
 
 
-## 集成内容
-todo
+## 集成步骤
 
+### 1. 添加依赖 
+```xml
+<dependency>
+    <groupId>org.flowable</groupId>
+    <artifactId>flowable-spring-boot-starter</artifactId>
+    <version>6.5.0</version>
+</dependency>
+```
+
+### 2. 启动一次
+将会自动创建相关表(78张)
+
+### 3. 
+
+### 4. 
+### 5. 
 
 
 
