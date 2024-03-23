@@ -2,6 +2,8 @@ package com.ruoyi.framework.shiro.service;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import javax.annotation.PostConstruct;
+
+import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.crypto.hash.Md5Hash;
@@ -19,9 +21,10 @@ import com.ruoyi.project.system.user.domain.User;
 
 /**
  * 登录密码方法
- * 
+ *
  * @author ruoyi
  */
+@Slf4j
 @Component
 public class PasswordService
 {
@@ -85,7 +88,7 @@ public class PasswordService
 
     public static void main(String[] args)
     {
-        System.out.println(new PasswordService().encryptPassword("admin", "admin123", "111111"));
-        System.out.println(new PasswordService().encryptPassword("ry", "admin123", "222222"));
+        log.info(new PasswordService().encryptPassword("admin", "admin123", "111111"));
+        log.info(new PasswordService().encryptPassword("ry", "admin123", "222222"));
     }
 }

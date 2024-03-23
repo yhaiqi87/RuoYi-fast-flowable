@@ -40,6 +40,11 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
         <!-- SpringBoot 核心包 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -209,7 +214,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        
+
         <!-- 防止进入swagger页面报类型转换错误，排除3.0.0中的引用，手动增加1.6.2版本 -->
         <dependency>
             <groupId>io.swagger</groupId>
@@ -243,7 +248,7 @@
                     <fork>true</fork> <!-- 如果没有该配置，devtools不会生效 -->
                 </configuration>
             </plugin>
-            <!-- YUI Compressor (CSS/JS压缩) 
+            <!-- YUI Compressor (CSS/JS压缩)
             <plugin>
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>yuicompressor-maven-plugin</artifactId>

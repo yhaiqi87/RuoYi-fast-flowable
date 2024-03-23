@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,9 +28,10 @@ import com.ruoyi.project.demo.domain.UserOperateModel;
 
 /**
  * 操作控制
- * 
+ *
  * @author ruoyi
  */
+@Slf4j
 @Controller
 @RequestMapping("/demo/operate")
 public class DemoOperateController extends BaseController
@@ -161,7 +164,7 @@ public class DemoOperateController extends BaseController
     @ResponseBody
     public AjaxResult addSave(CustomerModel customerModel)
     {
-        System.out.println(customerModel.toString());
+        log.info(customerModel.toString());
         return AjaxResult.success();
     }
 
@@ -256,7 +259,7 @@ public class DemoOperateController extends BaseController
 
     /**
      * 导入用户数据
-     * 
+     *
      * @param userList 用户数据列表
      * @param isUpdateSupport 是否更新支持，如果已存在，则进行更新数据
      * @return 结果
