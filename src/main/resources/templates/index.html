@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
-    <title>若依系统首页</title>
+    <title>若依（Flowable）</title>
     <!-- 避免IE使用兼容模式 -->
  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link th:href="@{favicon.ico}" rel="shortcut icon"/>
@@ -270,8 +270,8 @@
 <script th:src="@{/ajax/libs/fullscreen/jquery.fullscreen.js}"></script>
 <script th:inline="javascript">
 window.history.forward(1);
-var ctx = [[@{/}]]; 
-var lockscreen = [[${session.lockscreen}]]; 
+var ctx = [[@{/}]];
+var lockscreen = [[${session.lockscreen}]];
 if(lockscreen){window.top.location=ctx+"lockscreen";}
 // 皮肤缓存
 var skin = storage.get("skin");
@@ -348,7 +348,7 @@ $(function() {
 	    	}
 	    }
 	}
-	
+
 	/* 初始密码提示 */
 	if([[${isDefaultModifyPwd}]]) {
 		layer.confirm("您的密码还是初始密码，请修改密码！", {
@@ -361,7 +361,7 @@ $(function() {
 			layer.close(index);
 		});
 	}
-	
+
 	/* 过期密码提示 */
 	if([[${isPasswordExpired}]]) {
 		layer.confirm("您的密码已过期，请尽快修改密码！", {
